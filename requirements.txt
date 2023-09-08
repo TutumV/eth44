@@ -1,0 +1,6 @@
+mnemonic==0.20
+base58==2.1.1
+eth_utils==2.2.0
+pycrypto==2.6.1
+pycryptodome==3.18.0
+rlp==3.0.0
