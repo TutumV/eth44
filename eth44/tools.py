@@ -19,7 +19,7 @@ def create_wallet(mnemonic: str, account: int = 0, leaf: int = 0) -> Wallet:
     master_key = HDPrivateKey.master_key_from_mnemonic(mnemonic=mnemonic)
     root_key = HDKeyEthereum.from_path(master_key, DEFAULT_HD_PATH)
     keys = HDKeyEthereum.from_path(
-        root_key=root_key, path='{account}/{leaf}'.format(account=account, leaf=leaf)
+        root_key=root_key[-1], path='{account}/{leaf}'.format(account=account, leaf=leaf)
     )
     private_key = keys[-1]
     address = private_key.public_key.address()
